@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Claculator    </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Federant|Merriweather+Sans|Tomorrow&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+    <header>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div id="header"><p>Mathematics & Measurment</p></div>
+                        </div>
+                </div>
+    </header>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+               <li class="nav-item ">
+                 <a  href="index.html" id="aa">Standard Calculator</a>
+               </li>
+               <li class="nav-item">
+                 <a  href="Scientific.html" id="aa">Scientific Calculator</a>
+               </li>
+             </ul>
+         </nav>
+    </div>
+
+
+    <div class="container" id= "mainbody">
+        <div class="scal"> 
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-dark  btn-lg btn-block">Standard Calculator </button>
+                </div>
+            
+                
+            </div>
+            <div class="row" >
+                <div class="col-12 offset-md-2 col-md-8">
+                            <div class="row" >
+                                    <div class="col-9">
+                                        <input   id="result" class="inputcss btn-lg btn-block">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value="&larr;" class="backspacecss calcss btn-lg btn-block" onclick="backspace()"/>
+                                    </div>
+                            </div>
+                          
+                            <div class="row">
+                                    <div class="col-3">
+                                        <input type="button" value="Clear" class="Ccss calcss btn-lg btn-block" onclick="clr()"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="[" class="operatorcss calcss btn-lg btn-block" onclick= "dis('&#91')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="]" class="operatorcss calcss btn-lg btn-block"   onclick= "dis('&#93')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button"  value ="/" class="operatorcss calcss btn-lg btn-block" onclick="dis('/')">
+                                    </div>
+                            </div>
+                         
+                            <div class="row">
+                                    <div class="col-3">
+                                        <input type="button" value ="7" class="numcss calcss btn-lg btn-block" onclick="dis('7')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="8" class="numcss calcss btn-lg btn-block" onclick="dis('8')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="9" class="numcss calcss btn-lg btn-block" onclick="dis('9')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="*" class="operatorcss calcss btn-lg btn-block"  onclick="dis('*')">
+                                    </div>
+                            </div>
+                       
+                            <div class="row">
+                                    <div class="col-3">
+                                        <input type="button" value ="4" class="numcss calcss btn-lg btn-block" onclick="dis('4')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="5" class="numcss calcss btn-lg btn-block" onclick="dis('6')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="6" class="numcss calcss btn-lg btn-block" onclick="dis('6')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="-" class="operatorcss calcss btn-lg btn-block"  onclick="dis('-')">
+                                    </div>
+                            </div>
+          
+                            <div class="row">
+                                    <div class="col-3">
+                                        <input type="button" value ="1" class="numcss calcss btn-lg btn-block" onclick="dis('1')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="2" class="numcss calcss btn-lg btn-block" onclick="dis('2')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="3" class="numcss calcss btn-lg btn-block" onclick="dis('3')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="+" class="operatorcss calcss btn-lg btn-block"  onclick="dis('+')">
+                                    </div>
+                            </div>
+                  
+                            <div class="row">
+                                    <div class="col-3">
+                                        <input type="button" value ="." class="operatorcss calcss btn-lg btn-block" onclick="dis('.')">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="button" value ="0" class="numcss calcss btn-lg btn-block" onclick="dis('0')">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="button" value ="=" class="equalcss calcss btn-lg btn-block"  onclick="solve()">
+                                    </div>
+                            </div>
+                </div>
+            </div>	
+            <div style="padding-top:40px ;padding-bottom: 30px">
+                <h3>Large, easy and convenient online calculator</h3>
+                <p>Use for work, school or personal calculations. You can make not only simple math calculations and calculation of interest on the loan and bank lending rates, the calculation of the cost of works and utilities.
+
+                    Commands for the online calculator you can enter not only the mouse, but with a digital computer keyboard. Detailed instructions for using the calculator, see below.</p>
+                
+                <h2>Instructions for using the online calculator</h2>
+                    <h4>Keys function</h4>
+                    <p>[ 0 ], [ 1 ], [ 2 ], ... [ 9 ] - standard number keys;<br>
+                            [ &larr;] - remove the last character on the display;<br>
+                            [ + ] - addition, [ - ] - subtraction, [ х ] - multiplication, [ ÷ ] - division;<br>
+                            [ C ] - resets the calculator .</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+function dis(val) 
+{ 
+	document.getElementById("result").value+=val ;
+} 
+function solve() 
+{ 
+	var x = document.getElementById("result").value ;
+	var y = eval(x) ;
+	document.getElementById("result").value = y ;
+} 
+		
+		
+function clr() 
+{ 
+	document.getElementById("result").value = "" ;
+} 
+function backspace() 
+{ 
+	document.getElementById("result").value = document.getElementById("result").value.substring(0,document.getElementById("result").value.length-1);
+} 
+
+</script>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scientific Claculator    </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Federant|Merriweather+Sans|Tomorrow&display=swap" rel="stylesheet">
+
+
+    <script type="text/javascript" src="caljs.js"></script>
+</head>
+<body>
+    <header>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div id="header"><p>Mathematics & Measurment</p></div>
+                        </div>
+                </div>
+    </header>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+               <li class="nav-item ">
+                 <a  href="index.html" id="aa">Standard Calculator</a>
+               </li>
+               <li class="nav-item">
+                 <a  href="Scientific.html" id="aa">Scientific Calculator</a>
+               </li>
+             </ul>
+         </nav>
+    </div>
+
+
+    <div class="container" id= "mainbody">
+        <div class="sfcal"> 
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-dark  btn-lg btn-block">Standard Calculator </button>
+                </div>
+
+                <div class="container-fluid">
+                        <div class="row" >
+                            <div class="col-9">
+                                <input   id="result" class="inputcss btn-lg btn-block">
+                            </div>
+                            <div class="col-3">
+                                <input type="button" value="&larr;" class="backspacecss calcss btn-lg btn-block" onclick="backspace()"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input type="button" value="Clear" class="Ccss calcss btn-lg btn-block" onclick="clr()"/>
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="[" class="operatorcss calcss btn-lg btn-block" onclick= "dis('&#91')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="]" class="operatorcss calcss btn-lg btn-block"   onclick= "dis('&#93')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button"  value ="/" class="operatorcss calcss btn-lg btn-block" onclick="dis('/')">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input type="button" value ="7" class="numcss calcss btn-lg btn-block" onclick="dis('7')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="8" class="numcss calcss btn-lg btn-block" onclick="dis('8')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="9" class="numcss calcss btn-lg btn-block" onclick="dis('9')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="*" class="operatorcss calcss btn-lg btn-block"  onclick="dis('*')">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input type="button" value ="4" class="numcss calcss btn-lg btn-block" onclick="dis('4')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="5" class="numcss calcss btn-lg btn-block" onclick="dis('5')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="6" class="numcss calcss btn-lg btn-block" onclick="dis('6')">
+                                            </div>
+                                        <div class="col-3">
+                                                <input type="button" value ="-" class="operatorcss calcss btn-lg btn-block"  onclick="dis('-')">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input type="button" value ="1" class="numcss calcss btn-lg btn-block" onclick="dis('1')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="2" class="numcss calcss btn-lg btn-block" onclick="dis('2')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="3" class="numcss calcss btn-lg btn-block" onclick="dis('3')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="+" class="operatorcss calcss btn-lg btn-block"  onclick="dis('+')">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input type="button" value ="." class="operatorcss calcss btn-lg btn-block" onclick="dis('.')">
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="button" value ="0" class="numcss calcss btn-lg btn-block" onclick="dis('0')">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="button" value ="=" class="equalcss calcss btn-lg btn-block"  onclick="solve()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 col-md-6">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <input type="button" value="sin" class="funcss calcss btn-lg btn-block" onclick="sine()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="cos" class="funcss calcss btn-lg btn-block" onclick= "cose()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="tan" class="funcss calcss btn-lg btn-block"   onclick= "tane()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="pi" class="funcss calcss btn-lg btn-block"   onclick= "dis('3.141592653589793')">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <input type="button" value="asin" class="funcss calcss btn-lg btn-block" onclick="invsine()"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="acos" class="funcss calcss btn-lg btn-block" onclick= "invcose()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="atan" class="funcss calcss btn-lg btn-block"   onclick= "invtane()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="e" class="funcss calcss btn-lg btn-block"   onclick= "dis('2.7182818284')">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <input type="button" value="log" class="funcss calcss btn-lg btn-block" onclick="loge()"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="ln" class="funcss calcss btn-lg btn-block" onclick= "lne()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="%" class="funcss calcss btn-lg btn-block"   onclick= "dis('%')">
+                                            </div>
+                                            <div class="col-3">
+                                                 <input type="button" value ="1/x" class="funcss calcss btn-lg btn-block"   onclick= "inverse('%')">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <input type="button" value="&#8730" class="funcss calcss btn-lg btn-block" onclick="root()"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value="&#8731" class="funcss calcss btn-lg btn-block" onclick="cuberoot()"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="x^2" class="funcss calcss btn-lg btn-block" onclick= "squ()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="x^3" class="funcss calcss btn-lg btn-block"   onclick= "cube()">
+                                            </div>
+                                        </div>  
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <input type="button" value="00" class="funcss calcss btn-lg btn-block" onclick="dis('00')"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value="n!" class="funcss calcss btn-lg btn-block" onclick="fact()"/>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="e^x" class="funcss calcss btn-lg btn-block" onclick= "expe()">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value ="10^x" class="funcss calcss btn-lg btn-block"   onclick= "tenpow()">
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>          
+                        </div>
+                    </div>
+            </div>
+            <div style="padding-top: 30px; padding-bottom:30px;">
+            <h2>How to work with a scientific calculator</h2>
+            <h4>Calculator keys to perform trigonometric functions</h4>
+            <p>[ sin ] -Returns the sin of x (x is in radians) ;<br>
+                    [ cos ] - Returns the cos of x (x is in radians);<br>
+                    [ tan ] - Returns the tan of x (x is in radians);<br>
+                    [ π ] - is a mathematical constant, the ratio of a circle’s circumference to its diameter;<br>
+                    [ asin ] - Returns the arccosine of x, in radians;<br>
+                    [ acos ] -Returns the arccosine of x, in radianse;<br>
+                    [ atan ] - Returns the arccosine of x, in radians; <br>
+                    [ e ] - is a mathematical constant, Euler’s number;<br>
+                    [ log ] - is the common logarithm (to the base 10);<br>
+                    [ ln ] - is the natural logarithm (to the base e);<br>
+                    [ % ] - return remainder of the two numbers after division;<br>
+                    [ 1/x ] - return inverse of a number;<br>
+                    [ &#8730; ] - calculates the square root;<br>
+                    [ &#8731; ] - calculates the square root;<br>
+                    [ x^2] - raises X to the power of 2;<br>
+                    [ x^3] - raises X to the power of 2;<br>
+                    [ 00] - is the key for entering 2 zeros;<br>
+                    [ n!] - return factorial of number;<br>
+                    [ e^x] -  raises e to the power of x;<br>
+                    [ 10^x] - raises 10 to the power of x.<br>
+            </p>
+
+            <h4>Functions of the standard buttons</h4>
+            <p>[ 0 ], [ 1 ], [ 2 ], ... [ 9 ] - standard number keys;<br>
+                [ &larr;] - remove the last character on the display;<br>
+                [ + ] - addition, [ - ] - subtraction, [ х ] - multiplication, [ ÷ ] - division;<br>
+                [ C ] - resets the calculator .</p>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
