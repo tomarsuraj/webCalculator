@@ -1,3 +1,3 @@
 # webCalculator
 tryme 
-https://surajtomar.github.io/webCalculator/Scientific.html
+https://tomarsuraj.github.io/webCalculator/Scientific.html
